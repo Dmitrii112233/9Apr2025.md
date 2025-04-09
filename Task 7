@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 7</title>
+</head>
+<body>
+
+  <ul id="initial_list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+  <button id="itemInsertBtn">Insert New Item</button>
+
+  <script>
+    function addListItem() {
+      const  newListItemText = prompt("Text:");
+      if (newListItemText) {
+        const list_box = document.getElementById('initial_list');
+        const newListElement = document.createElement('li');
+        newListElement.textContent = newListItemText;
+        list_box.appendChild(newListElement);
+      }
+    }
+
+    document.getElementById('itemInsertBtn').addEventListener('click', addListItem);
+  </script>
+
+</body>
+</html>
